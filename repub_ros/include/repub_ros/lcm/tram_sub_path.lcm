@@ -1,0 +1,14 @@
+package eurecar;
+
+struct tram_sub_path
+{
+    int64_t timestamp;
+    int32_t num_sub_maptrack2;
+    int32_t num_sub_path;
+    float sub_maptrack2_x[num_sub_maptrack2];
+    float sub_maptrack2_y[num_sub_maptrack2];
+    float sub_path_x[num_sub_path];
+    float sub_path_y[num_sub_path];
+
+}
+

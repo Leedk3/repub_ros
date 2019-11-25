@@ -1,0 +1,18 @@
+package eurecar;
+
+struct tram_mission
+{
+    int64_t timestamp;
+    int32_t current_idx;
+    int32_t mission_number;
+    int32_t num_localpath;
+    double pos_x;
+    double pos_y;
+    double cur_veh_heading;
+    double cur_veh_speed;
+    double cur_veh_steer_angle;
+    double goal_veh_speed;
+    double goal_veh_steer_angle;
+    float pt_x[num_localpath];
+    float pt_y[num_localpath];
+}

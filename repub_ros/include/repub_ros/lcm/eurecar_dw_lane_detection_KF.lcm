@@ -1,0 +1,25 @@
+package eurecar;
+
+
+/*
+using driveworks, lane detection with Kalman filter lcm definition
+*/
+
+struct dw_lane_detection_KF
+{
+	int64_t timestamp;
+	int32_t num_of_lanes;
+	int32_t lane_pos[num_of_lanes]; 
+/* -2:left-left -1: ego-left 1:ego-right 2:right-right 0:unknown */
+
+	int32_t lane_type[num_of_lanes];
+/* 1:solid 2:dashed 3:road-boundary 0:unknown */
+
+	double max_y[num_of_lanes];
+	double min_y[num_of_lanes];
+	double coef_3[num_of_lanes];
+	double coef_2[num_of_lanes];
+	double coef_1[num_of_lanes];
+	double coef_0[num_of_lanes];
+	int32_t confidence[num_of_lanes];
+}
